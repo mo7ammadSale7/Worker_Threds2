@@ -4,11 +4,9 @@ var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/";
 
 parentPort.on("message", (data) => {
-  data.items.forEach((item) => {
-    parentPort.postMessage({
-      message: `${item.first_name} inserted`,
-      item: threds(item),
-    });
+  parentPort.postMessage({
+    message: data.item.first_name,
+    item: threds(data.item),
   });
 });
 
