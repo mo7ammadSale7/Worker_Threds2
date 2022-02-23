@@ -1,4 +1,3 @@
-const { Worker, isMainThread } = require("worker_threads");
 const { StaticPool } = require("node-worker-threads-pool");
 const express = require("express");
 const app = express();
